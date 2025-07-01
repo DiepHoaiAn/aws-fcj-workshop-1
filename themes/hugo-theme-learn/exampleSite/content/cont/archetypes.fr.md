@@ -20,7 +20,9 @@ Cela crééra une page avec le Front Matter suivant:
 ```markdown
 +++
 title = "{{ replace .Name "-" " " | title }}"
-date = {{ .Date }}
+date : "2025-06-14"
+
+
 weight = 5
 chapter = true
 pre = "<b>X. </b>"
@@ -49,7 +51,8 @@ Cela crééra une page avec le Front Matter suivant:
 ```markdown
 +++
 title = "{{ replace .Name "-" " " | title }}"
-date =  {{ .Date }}
+date : "2025-06-14"
+
 weight = 5
 +++
 

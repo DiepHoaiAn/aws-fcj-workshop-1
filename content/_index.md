@@ -1,6 +1,6 @@
 ---
 title : "Session Management"
-date :  "`r Sys.Date()`" 
+date : "2025-06-14"
 weight : 1 
 chapter : false
 ---

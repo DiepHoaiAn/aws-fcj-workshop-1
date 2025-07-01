@@ -1,6 +1,6 @@
 ---
 title : "Connect to EC2 servers"
-date : "`r Sys.Date()`"
+date : "2025-06-14"
 weight : 3
 chapter : false
 pre : " <b> 3. </b> "

@@ -1,6 +1,8 @@
 +++
 title = "Dọn dẹp tài nguyên  "
-date = 2021
+date = "2025-06-14"
+
+
 weight = 6
 chapter = false
 pre = "<b>6. </b>"

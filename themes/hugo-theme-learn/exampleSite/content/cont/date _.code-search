@@ -1,0 +1,52 @@
+# Query: date =
+# ContextLines: 1
+
+10 results - 8 files
+
+archetypes\chapter.md:
+  2  title = "{{ replace .Name "-" " " | title }}"
+  3: date = "`r Sys.Date()`"
+  4  weight = 5
+
+archetypes\default.md:
+  2  title = "{{ replace .Name "-" " " | title }}"
+  3: date = "`r Sys.Date()`"
+  4  
+
+content\6-cleanup\_index.md:
+  2  title = "Clean up resources"
+  3: date = "`r Sys.Date()`"
+  4  weight = 6
+
+content\6-cleanup\_index.vi.md:
+  2  title = "Dọn dẹp tài nguyên  "
+  3: date = "`r Sys.Date()`"
+  4  
+
+themes\hugo-theme-learn\archetypes\chapter.md:
+  2  title = "{{ replace .Name "-" " " | title }}"
+  3: date = "`r Sys.Date()`"
+  4  weight = 5
+
+themes\hugo-theme-learn\archetypes\default.md:
+  2  title = "{{ replace .Name "-" " " | title }}"
+  3: date = "`r Sys.Date()`"
+  4  weight = 5
+
+themes\hugo-theme-learn\exampleSite\content\cont\archetypes.en.md:
+  22  title = "{{ replace .Name "-" " " | title }}"
+  23: date = "`r Sys.Date()`"
+  24  weight = 5
+
+  51  title = "{{ replace .Name "-" " " | title }}"
+  52: date = "`r Sys.Date()`"
+  53  
+
+themes\hugo-theme-learn\exampleSite\content\cont\archetypes.fr.md:
+  22  title = "{{ replace .Name "-" " " | title }}"
+  23: date = "`r Sys.Date()`"
+  24  
+
+  52  title = "{{ replace .Name "-" " " | title }}"
+  53: date = "`r Sys.Date()`"
+  54  

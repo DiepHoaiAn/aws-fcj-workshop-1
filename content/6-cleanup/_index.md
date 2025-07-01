@@ -1,6 +1,7 @@
 +++
 title = "Clean up resources"
-date = 2022
+date = "2025-06-14"
+
 weight = 6
 chapter = false
 pre = "<b>6. </b>"
