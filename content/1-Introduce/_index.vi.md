@@ -6,9 +6,9 @@ chapter : false
 pre : " <b> 1. </b> "
 ---
 
-Trong chương này, chúng ta sẽ cùng tìm hiểu:
+### Nội dung
 
-- Bối cảnh 
-- Quy trình xử lý ảnh 
-- Quy ước & Best Practices
+- [Bối cảnh](1.1-businesscontext/)
+- [Quy trình xử lý ảnh](1.2-workflow/) 
+- [Quy ước & Best Practices](1.3-bestpractices/)
 - Cài đặt môi trường
