@@ -1,7 +1,7 @@
 ---
 title : "Tạo VPC "
 date : "2025-06-14"
-weight : 1 
+weight : 2 
 chapter : false
 pre : " <b> 2.1.1 </b> "
 ---

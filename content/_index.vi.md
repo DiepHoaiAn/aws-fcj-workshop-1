@@ -1,76 +1,42 @@
 ---
-title: "Serverless Image Processing với S3 Events, Rekognition và Step Functions"
+title: "Xây dựng Ứng dụng Web Đặt Vé Sự Kiện với AWS Amplify"
 date: "2025-06-14"
-weight: 1
+weight: 0
 chapter: false
+pre: "<b> 0. </b>"
 ---
 
 # 📌 Thông tin Workshop
 
-**Tên Workshop:** Serverless Image Processing với S3 Events, Rekognition và Step Functions  
+**Tên Workshop:** Xây dựng Ứng dụng Web Đặt Vé Sự Kiện với AWS Amplify  
 **Thực hiện bởi:** Diệp Hoài An  
 **MSSV:** 21110001  
 **Email:** diephoaian2003@gmail.com  
 **Trường:** Đại học Sư phạm Kỹ thuật TP.HCM (HCMUTE)  
-**Chương trình:** AWS First Cloud Journey Internship  
-**Ngày hoàn thành:** 04/07/2025  
+**Chương trình:** AWS First Cloud Journey Internship (bắt đầu từ ngày 29/04/2025)  
+**Ngày hoàn thành workshop:** 05/07/2025  
 
 ---
 
-# Xử lý ảnh bằng Serverless với S3 Events, Rekognition và Step Functions 
+# Xây dựng ứng dụng web đặt sự kiện với AWS Amplify
 
-## Giới thiệu   
-Workshop này hướng dẫn cách triển khai một pipeline xử lý ảnh đại diện người dùng hoàn toàn bằng mô hình **serverless** trên AWS. Hệ thống thực hiện:
-- **Phát hiện khuôn mặt**
-- **Kiểm tra ảnh trùng lặp**
-- **Tạo ảnh thu nhỏ**
-- **Xác thực định dạng ảnh**
-- **Trích xuất và lưu metadata**
-- **Tự động xoá ảnh lỗi**
-- **Gửi kết quả thành công/thất bại**
+Workshop **"Xây dựng Ứng dụng Web Đặt Vé Sự Kiện với AWS Amplify"** là một workshop thuộc AWS workshop studio.  
 
-Các dịch vụ được sử dụng gồm:
+Lý do em chọn workshop này dù cấu trúc workshop không phức tạp, đó chính là vì nó bao gồm đầy đủ các bước cần thiết để triển khai một hệ thống web hiện đại theo kiến trúc serverless.
 
-- **Amazon Rekognition** để phân tích và đối chiếu khuôn mặt  
-- **AWS Lambda** để xử lý từng bước ảnh  
-- **Step Functions** để điều phối toàn bộ quy trình xử lý  
-- **Amazon S3** để lưu trữ ảnh gốc/thumbnail và làm website tĩnh  
-- **DynamoDB**, **SNS**, **EventBridge** để lưu thông tin, gửi thông báo và kích hoạt xử lý  
+Workshop này là một trong những ví dụ điển hình giúp hiểu rõ cách AWS hỗ trợ triển khai backend (GraphQL API, Cognito, DynamoDB...) kết hợp với frontend (VueJS) một cách nhanh chóng, hiệu quả và thực tế.
 
-👉 Kết quả xử lý cuối cùng được hiển thị trực tiếp qua một **website tĩnh trên S3**.
+Workshop không chỉ giúp em rèn luyện kỹ năng kỹ thuật, mà còn giúp em có cái nhìn tổng quát hơn về mô hình phát triển ứng dụng hiện đại với cloud. Chính vì vậy, em sẽ thực hiện lại workshop này và giải thích kĩ hơn về cấu trúc để giúp những bạn mới tìm hiểu về AWS như em có thể dễ dàng hình dung sự tương tác giữa các thành phần và vì sao có các bước trong workshop.
 
----
+Vì vậy, em hy vọng báo cáo này không chỉ thể hiện những gì em đã thực hiện được, mà còn là một **tài liệu hướng dẫn dễ hiểu** cho những bạn sinh viên mới làm quen với AWS hoặc đang tìm hiểu về serverless và mô hình phát triển ứng dụng hiện đại.
 
-## Yêu cầu & Kỹ năng đạt được
 
-Workshop này được thiết kế để giúp bạn thành thạo:
+### Thời gian thực hiện
 
-- Phát hiện khuôn mặt qua Rekognition
-- Kiểm tra trùng lặp khuôn mặt đã có trong hệ thống
-- Resize ảnh để tạo thumbnail
-- Kiểm tra định dạng hợp lệ (.jpg, .png)
-- Trích xuất metadata và lưu vào DynamoDB
-- Tự động dọn dẹp ảnh không hợp lệ hoặc lỗi
-- Gửi thông báo thành công/thất bại bằng SNS
-- Thiết lập workflow serverless với Step Functions
-- Tối ưu hoá chi phí và cấu hình theo dõi qua AWS console
-- Upload và hiển thị kết quả qua giao diện website S3
-- Mô tả, phân tích và đánh giá quy trình vận hành
+2 – 3.5 tiếng  
+(Phụ thuộc vào độ quen thuộc với Amplify và Vue)
 
----
+### Nội dung Workshop
 
-## Thời gian thực hiện
-
-1.5 – 2.5 tiếng  
-(Phụ thuộc vào mức độ quen thuộc của bạn với AWS)
-
----
-
-## Nội dung Workshop
-
-1. [Giới thiệu](1-introduce/)
-2. [Chuẩn bị môi trường (VPC, EC2, IAM)](2-prerequiste/)
-3. [Tạo kết nối đến EC2 & upload ảnh](3-accessibilitytoinstances/)
-4. [Quản lý session logs với S3](4-s3log/)
-5. [Port Forwarding & giao diện S3 Website](5-portfwd/)
-6. [Dọn dẹp tài nguyên & tổng kết](6-cleanup/)
+- [1. Giới thiệu](./1-introduce/)
+- [2. Chuẩn bị môi trường và công cụ](./2-prerequiste/)
