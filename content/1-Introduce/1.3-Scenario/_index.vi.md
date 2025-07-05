@@ -48,7 +48,7 @@ Giao diện hiển thị danh sách các sự kiện mẫu với hình ảnh, th
 Các dữ liệu này được tạo ngẫu nhiên từ script mô phỏng (mock data) khi chạy app ở chế độ `npm run dev`.
 
 
-#### Tình trạng hiện tại
+#### Tình trạng ban đầu
 
 - Ứng dụng chỉ chạy được local.
 - Không có tính năng đăng nhập thật.
@@ -64,6 +64,25 @@ Bạn sẽ là người thực hiện các bước sau:
 3. Thiết kế mô hình dữ liệu (schema GraphQL) cho các thực thể như *Event*, *Room*, *Booking*.
 4. Tích hợp và đồng bộ cơ sở dữ liệu thật sử dụng DynamoDB.
 5. Gắn kết toàn bộ các thao tác frontend (sign in, đặt vé, tạo dữ liệu mẫu) với backend thực tế qua API.
+
+#### Sơ đồ quy trình thực hành
+
+Đây là sơ đồ minh họa các bước bạn sẽ thực hiện trong workshop này:
+
+![Workflow - Amplify Integration](/images/1.introduction/workflow-overview.png)
+
+> Sơ đồ thể hiện toàn bộ hành trình từ việc thiết lập môi trường local, cấu hình backend bằng AWS Amplify, đến tích hợp frontend với backend thật.  
+Kết quả cuối cùng là một ứng dụng MUSSEL full-stack chạy ổn định với dữ liệu thực trên cloud.
+
+Các bước chính trong quy trình:
+1. Clone ứng dụng mẫu MUSSEL từ GitHub và khởi chạy thử local.
+2. Khởi tạo môi trường AWS Amplify  cho project frontend.
+3. Thêm dịch vụ xác thực người dùng bằng Amazon Cognito.
+4. Thiết kế schema dữ liệu GraphQL (Event, Room, Booking).
+5. Tự động tạo backend thật với DynamoDB và GraphQL API (amplify push).
+6. Kết nối frontend có sẵn với API backend bằng mutation/query.
+7. Kiểm thử hoàn chỉnh luồng người dùng: đăng nhập, đặt vé, lưu dữ liệu.
+8. Ứng dụng full-stack serverless hoàn tất*.
 
 
 {{% notice info %}}

@@ -1,39 +1,67 @@
 ---
-title : "Tạo IAM Role"
+title : "Khám phá mã nguồn ứng dụng MUSSEL"
 date : "2025-06-14" 
 weight : 2 
 chapter : false
 pre : " <b> 2.2 </b> "
 ---
+Mục tiêu phần này là giúp bạn hiểu cấu trúc mã nguồn và cơ chế xử lý đăng nhập (mock login) của ứng dụng MUSSEL trước khi tích hợp Cognito.
 
-### Tạo IAM Role
+---
 
-Trong bước này chúng ta sẽ tiến hành tạo IAM Role. Trong IAM Role này sẽ được gán policy **AmazonSSMManagedInstanceCore**, đây là policy cho phép máy chủ EC2 có thể giao tiếp với Session Manager.
+### Cấu trúc thư mục chính
 
-1. Truy cập vào [giao diện quản trị dịch vụ IAM](https://console.aws.amazon.com/iamv2/)
-2. Ở thanh điều hướng bên trái, click  **Roles**.  
+| Thành phần              | Chức năng chính                                     |
+|-------------------------|-----------------------------------------------------|
+| public/               | Lưu ảnh minh họa sự kiện                            |
+| index.html            | Điểm khởi đầu của ứng dụng                          |
+| src/main.ts           | Khởi tạo app Vue và load mock data                 |
+| src/App.vue           | Thành phần gốc của giao diện                        |
+| src/components/       | Giao diện: AppBar, BottomNav, EventsList,...        |
+| src/store/            | Quản lý trạng thái (auth, data, UI, mock data)     |
+| src/models/           | Kiểu dữ liệu (Event, Room)                          |
+| src/plugins/          | Cấu hình Vuetify, WebFont,...                       |
 
-![role](/images/2.prerequisite/038-iamrole.png)
 
-3. Click **Create role**.  
+### Luồng khởi tạo chính
 
-![role1](/images/2.prerequisite/039-iamrole.png)
+- **index.html** nhúng **main.ts**
+- **main.ts** gọi **dataStore.initMockData()** để tạo dữ liệu giả
+- Tải **App.vue**, hiển thị cấu trúc ứng dụng
 
-4. Click **AWS service** và click **EC2**. 
-  + Click **Next: Permissions**.  
 
-![role1](/images/2.prerequisite/040-iamrole.png)
+### Cách xử lý nút Sign In
 
-5. Trong ô Search, điền **AmazonSSMManagedInstanceCore** và ấn phím Enter để tìm kiếm policy này.
-  + Click chọn policy **AmazonSSMManagedInstanceCore**.
-  + Click **Next: Tags.**
+#### File AppBar.vue
 
-![createpolicy](/images/2.prerequisite/041-iamrole.png)
+```vue
+<v-btn v-if="userSignedIn" @click="showSignOut">Sign Out</v-btn>
+<v-btn v-else @click="showSignIn">Sign In</v-btn>
+<SignInOutDialogs />
+```
+Dựa vào biến `userSignedIn` từ `authStore.userAuthenticated`
 
-6. Click **Next: Review**.
-7. Đặt tên cho Role là **SSM-Role** ở Role Name  
-  + Click **Create Role** \.
+Khi nhấn **Sign In** → gọi **showSignIn()** → hiển thị hộp thoại
 
-![namerole](/images/2.prerequisite/042-iamrole.png)
+#### File SignInOutDialogs.vue  
 
-Tiếp theo chúng ta sẽ thực hiện kết nối đến các máy chủ EC2 chúng ta đã tạo bằng **Session Manager**.
+Hiển thị `v-dialog` khi `showDialog = true`. Không gọi API, chỉ gán:
+
+```ts
+function signIn() {
+  authStore.userAuthenticated = true;
+}
+```
+→ Mô phỏng trạng thái đã đăng nhập.
+
+{{% notice info %}}
+Chức năng Sign In ở bước này chỉ là giả lập (mock).
+Bạn sẽ thay thế bằng hệ thống xác thực thực tế với Amazon Cognito trong các bước tiếp theo.
+{{% /notice %}}
+
+### Kết luận
+- Mã nguồn được tổ chức rõ ràng theo cấu trúc component-based.  
+- Sử dụng Vue 3 + Pinia để quản lý trạng thái.  
+- Cơ chế đăng nhập hiện tại chưa kết nối với backend – chỉ mô phỏng về mặt giao diện.  
+
+> Tiếp theo: Bắt đầu thêm xác thực thực bằng cách tích hợp Amazon Cognito với Amplify.
