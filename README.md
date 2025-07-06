@@ -1,9 +1,12 @@
 # 🎟️ Workshop: Build a Serverless Event Booking Web App with AWS Amplify
 
-This is a **Hugo-based documentation site** for the workshop **"Xây dựng Ứng dụng Web Đặt Vé Sự Kiện với AWS Amplify"**, designed for students and developers who want to learn how to create full-stack, serverless web applications using **AWS Amplify**.
+> 📘 **Workshop đang chạy tại:**  
+> 🔗 [https://diephoaian.github.io/aws-fcj-workshop-1](https://diephoaian.github.io/aws-fcj-workshop-1)
+
+This is a **Hugo-based documentation site** for the workshop **Build a Serverless Event Booking Web App with AWS Amplify**, designed for students and developers who want to learn how to create full-stack, serverless web applications using **AWS Amplify**.
 
 > ✅ This workshop is part of the **AWS First Cloud Journey Internship Program (FCJ 2025)**
-> 📚 Language: Vietnamese (Tiếng Việt)
+> 📚 Language: Vietnamese (Tiếng Việt) and English
 
 
 ## 📌 Workshop Overview
@@ -38,9 +41,9 @@ static/
 To run the Hugo site on your machine:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME
-hugo server
+git git clone https://github.com/diephoaian/aws-fcj-workshop-1.git
+cd aws-fcj-workshop-1
+hugo serve
 ```
 
 Then open your browser at [http://localhost:1313](http://localhost:1313)
