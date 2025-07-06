@@ -27,7 +27,7 @@ Trong nhiều tổ chức, đặc biệt là các trường đại học hoặc 
 
 Để có cái nhìn trực quan về toàn bộ hệ thống mà bạn sẽ xây dựng trong workshop này, hãy cùng quan sát sơ đồ kiến trúc dưới đây.
 
-![Kiến trúc tổng quan của ứng dụng đặt vé sự kiện](images/1.introduction/01-Architecture.png)
+![Kiến trúc tổng quan của ứng dụng đặt vé sự kiện](/images/1.introduction/01-Architecture.png)
 
 #### Giải thích sơ đồ:
 
