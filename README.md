@@ -52,9 +52,7 @@ Then open your browser at [http://localhost:1313](http://localhost:1313)
 ## 🌐 Live Site (GitHub Pages)
 
 > 📌 Hosted on GitHub Pages at:
-> `https://your-username.github.io/your-repo-name`
-
-(Replace with actual link)
+> `https://diephoaian.github.io/aws-fcj-workshop-1`
 
 
 ## 📚 Who is this for?
@@ -108,29 +106,10 @@ Tài liệu được chia theo các chương tương ứng với các bước th
 - `3. Truy xuất và cập nhật dữ liệu bằng DynamoDB + GraphQL`
 - `4. Kết luận & Xoá tài nguyên AWS`
 
-
-## 🚀 Cách triển khai
-
-1. Clone repo này về máy:
-   ```bash
-   git clone https://github.com/your-username/aws-ticket-workshop.git
-   ```
-2. Cài Hugo
-
-```bash
-# Dành cho macOS
-brew install hugo
-
-# Dành cho Windows
-choco install hugo-extended -confirm
-```
-3. Chạy thử local
-```bash
-hugo serve
-```
 ### Deploy lên GitHub Pages
 - Đã cấu hình sẵn qua file .github/workflows/deploy.yml  
-- Mỗi lần push vào nhánh main, hệ thống sẽ tự động build & publish trang web bằng GitHub Actions.  
+- Mỗi lần push vào nhánh main, hệ thống sẽ tự động build & publish trang web bằng GitHub Actions. 
+- Link truy cập:  `https://diephoaian.github.io/aws-fcj-workshop-1` 
 
 📌 Ghi chú
 - Đây là tài liệu học thuật, không dùng cho mục đích thương mại.  
