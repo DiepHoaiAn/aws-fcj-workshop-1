@@ -93,5 +93,3 @@ Sau bước này, bạn đã:
 - Hiểu được cách giao diện hoạt động với dữ liệu mô phỏng.
 - Trải nghiệm luồng người dùng: **đăng nhập**, **đặt vé**, **xem vé đã đặt**.
 
-Ở bước tiếp theo, bạn sẽ kết nối ứng dụng với backend thực bằng cách thêm xác thực người dùng bằng **Amazon Cognito**.
-
