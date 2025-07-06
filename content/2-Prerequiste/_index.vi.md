@@ -12,6 +12,21 @@ Lab này giúp bạn khởi động ứng dụng frontend mẫu MUSSEL và thi�
 Trước khi bắt đầu, hãy chắc chắn rằng bạn đã cài đặt các công cụ theo yêu cầu ở mục **1.2 Chuẩn bị môi trường và cài đặt công cụ**.
 
 ---
+### Kiến trúc xác thực ứng dụng MUSSEL
+
+Sơ đồ dưới đây minh họa cách frontend (chạy ở localhost:3000) tương tác với dịch vụ xác thực Amazon Cognito thông qua AWS Amplify:
+
+![Luồng xác thực MUSSEL với AWS Amplify và Cognito](/images/2.prerequisite/02-Frontend-Authentication-Flow-with-AWS.png)
+
+- **Amplify CLI**: dùng để khởi tạo (`init`) và triển khai (`deploy`) backend lên AWS.
+- **Vue.js App**: giao diện người dùng cài sẵn thư viện **Amplify Auth** để gửi yêu cầu xác thực.
+- **Amazon Cognito**: xử lý các yêu cầu đăng nhập, đăng ký và trả về token xác thực.
+- **Token trả về**: được sử dụng để xác thực các API khác (như truy vấn dữ liệu hoặc đặt vé).
+
+{{% notice info %}}
+Chương này chỉ mới kết nối phần xác thực (Auth) – chưa bao gồm phần lưu trữ dữ liệu (GraphQL hoặc DynamoDB).
+{{% /notice %}}
+
 
 #### Bước 1: Clone ứng dụng mẫu từ GitHub
 
@@ -96,5 +111,11 @@ Nếu không tắt đúng cách, khi bạn chạy lại `npm: dev`, sẽ có nhi
 
 Bạn đã hoàn tất việc **cài đặt và chạy ứng dụng frontend mẫu MUSSEL** ở chế độ local.  
 Các bước tiếp theo sẽ giúp bạn bắt đầu tích hợp **AWS Amplify** để bổ sung backend thực tế.
+
+### Nội dung tiếp theo
+- [2.1 Khám phá ứng dụng MUSSEL](./2.1-MUSSELapp/)
+- [2.2 Khám phá mã nguồn ứng dụng MUSSEL](./2.2-MUSSELrepo/)
+- [2.3 Thêm dịch vụ Amazon Cognito](./2.3-AddCognito/)
+- [2.4 Tích hợp đăng nhập thật với Cognito](./2.4-LogIn/)
 
 

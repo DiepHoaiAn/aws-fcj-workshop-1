@@ -7,7 +7,7 @@ pre : " <b> 1.3 </b> "
 ---
 ### Giới thiệu bối cảnh
 
-Chúc mừng, bạn vừa được tuyển dụng vào làm tại **Crustacean Computing** với vị trí kỹ sư phần mềm!
+Chúc mừng, bạn vừa được tuyển dụng vào làm tại **FCJ-UTE Computing** với vị trí kỹ sư phần mềm!
 
 Trong dự án này, bạn sẽ làm việc với một ứng dụng web có tên là **MUSSEL** (My University’s Sports & Social Events List) – nền tảng giúp sinh viên dễ dàng xem và đặt vé tham gia các sự kiện trong trường đại học.
 

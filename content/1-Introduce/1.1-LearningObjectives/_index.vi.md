@@ -33,8 +33,6 @@ Trong quá trình thực hành, bạn sẽ học được cách:
 - Triển khai backend serverless, phù hợp với xu hướng phát triển ứng dụng hiện đại
 
 
-### Giá trị cốt lõi
-
 {{% notice tip %}}
 Không chỉ rèn luyện kỹ năng kỹ thuật, workshop còn giúp bạn phát triển tư duy **kiến trúc ứng dụng cloud-native hiện đại**, sẵn sàng cho môi trường doanh nghiệp sử dụng AWS thực tế.
 {{% /notice %}}

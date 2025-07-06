@@ -178,5 +178,6 @@ Amplify UI hỗ trợ custom rất linh hoạt.
 Bạn đã thay thế thành công mock login bằng đăng nhập thực sử dụng Amazon Cognito.  
 Amplify UI Authenticator giúp triển khai nhanh, an toàn, dễ bảo trì.  
 Pinia Store đã được cập nhật để theo dõi trạng thái đăng nhập thực tế.  
-Tiếp theo: Thêm cơ sở dữ liệu thật sử dụng DynamoDB + GraphQL.  
+Tiếp theo: Di chuyển toàn bộ dữ liệu mô phỏng (mock data) đang lưu local lên cloud, sử dụng một dịch vụ backend thực tế.
+
 

@@ -39,4 +39,6 @@ Vì vậy, em hy vọng báo cáo này không chỉ thể hiện những gì em 
 ### Nội dung Workshop
 
 - [1. Giới thiệu](./1-introduce/)
-- [2. Chuẩn bị môi trường và công cụ](./2-prerequiste/)
+- [2. Xác thực Web App với AWS Amplify](./2-Prerequiste/)
+- [3. Truy xuất dữ liệu với Amazon DynamoDB](./3-Accessibilitytoinstances/)
+- [4. Kết luận và Xóa tài nguyên](./4-CleanUp/)
