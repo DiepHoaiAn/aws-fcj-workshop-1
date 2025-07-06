@@ -99,7 +99,7 @@ Chạy lệnh sau để khởi động lại ứng dụng:
 npm run dev
 ```  
 
-Mở trình duyệt và truy cập địa chỉ http://localhost:3000/ để kiểm tra.
+Mở trình duyệt và truy cập địa chỉ `http://localhost:3000/` để kiểm tra.
 Bạn sẽ thấy giao diện đăng nhập đã được cập nhật với tính năng đăng nhập thực. Bây giờ, bạn có thể đăng nhập bằng tên người dùng đã tạo trong Amazon Cognito.
 
 ---

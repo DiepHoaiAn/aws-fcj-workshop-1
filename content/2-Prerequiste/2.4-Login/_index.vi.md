@@ -34,9 +34,10 @@ Mở terminal và chạy lệnh sau:
 mv src/aws-exports.js src/amplify-config.js
 ```
 Hoặc bạn muốn đổi tên thủ công file `aws-exports.js` thành `amplify-config.js` hoặc `aws-exports.ts` nếu bạn sử dụng TypeScript.  
-Trong VS Code, bạn có thể chuột phải vào file `aws-exports.js` và chọn "Rename" để đổi tên.
+Trong VS Code, bạn có thể chuột phải vào file `aws-exports.js` và chọn **Rename** để đổi tên.
 
 #### 3. Cập nhật **AppBar.vue**
+File: src/components/AppBar.vue
 Thêm vào cuối script setup:
 ```ts
 const auth = useAuthStore();
@@ -89,6 +90,7 @@ Hub.listen('auth', async (data) => {
 });
 ```
 #### 5. Cập nhật **SignInOutDialogs.vue**
+File: File: src/components/SignInOutDialogs.vue
 ```ts
 <script setup lang="ts">
 import { DialogState } from '@/types/DialogState';
@@ -175,9 +177,10 @@ Amplify UI hỗ trợ custom rất linh hoạt.
 {{% /notice %}}
 
 ### Kết luận
-Bạn đã thay thế thành công mock login bằng đăng nhập thực sử dụng Amazon Cognito.  
-Amplify UI Authenticator giúp triển khai nhanh, an toàn, dễ bảo trì.  
-Pinia Store đã được cập nhật để theo dõi trạng thái đăng nhập thực tế.  
+Bạn đã thay thế thành công mock login bằng đăng nhập thực sử dụng **Amazon Cognito**.  
+**Amplify UI Authenticator** giúp triển khai nhanh, an toàn, dễ bảo trì.  
+**Pinia Store** đã được cập nhật để theo dõi trạng thái đăng nhập thực tế.  
+
 Tiếp theo: Di chuyển toàn bộ dữ liệu mô phỏng (mock data) đang lưu local lên cloud, sử dụng một dịch vụ backend thực tế.
 
 

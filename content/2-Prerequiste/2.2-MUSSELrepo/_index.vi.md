@@ -64,4 +64,4 @@ Bạn sẽ thay thế bằng hệ thống xác thực thực tế với Amazon C
 - Sử dụng Vue 3 + Pinia để quản lý trạng thái.  
 - Cơ chế đăng nhập hiện tại chưa kết nối với backend – chỉ mô phỏng về mặt giao diện.  
 
-> Tiếp theo: Bắt đầu thêm xác thực thực bằng cách tích hợp Amazon Cognito với Amplify.
+Tiếp theo: Bắt đầu thêm xác thực thực bằng cách tích hợp Amazon Cognito với Amplify.

@@ -49,7 +49,6 @@ async fetchData() {
 
   this.rooms = dbRooms.data.listRooms.items.map(room => {
     return new Room(room.id, room.name, room.capacity, []);
-    // 📌 Gợi ý: bạn có thể viết truy vấn tùy chỉnh để lấy thêm bookings
   });
 
   this.events = dbEvents.data.listEvents.items.map(event => {
@@ -168,7 +167,7 @@ Room-XXXXX-dev
 Tên bảng có thể khác nhau tùy theo tên dự án và môi trường (dev, staging...).
 {{% /notice %}}
 
-- Chọn bảng **eventplanner-dev-Event-XXXXX** để xem dữ liệu sự kiện.
+- Chọn bảng **Event-XXXXX-dev** để xem dữ liệu sự kiện.
 - Bạn sẽ thấy các mục dữ liệu đã được tạo từ ứng dụng, bao gồm các trường như *id*, *name*, *description*, *event_owner*, *room_id*, *event_datetime_start*, *event_datetime_end*, *total_tickets*, và mảng *tickets* chứa các ID người dùng đã đặt vé.
 - Tương tự, bạn có thể chọn bảng *Room-XXXXX-dev* để xem dữ liệu phòng.
 ![DB](/images/3.connect/03-DB1.png)

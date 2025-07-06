@@ -1,91 +1,70 @@
 ---
-title : "Port Forwarding"
+title : "Conclusion and Resource Cleanup"
 date : "2025-06-14"
-weight : 5 
+weight : 4 
 chapter : false
-pre : " <b> 5. </b> "
+pre : " <b> 4. </b> "
 ---
 
-{{% notice info %}}
-**Port Forwarding** is a useful way to redirect network traffic from one IP address - Port to another IP address - Port. With **Port Forwarding** we can access an EC2 instance located in the private subnet from our workstation.
+After completing the **"Building an Event Ticket Booking Web App with AWS Amplify"** workshop, you now have a solid understanding of how to build a **serverless full-stack application**, from implementing user authentication using **Amazon Cognito** to storing data with **Amazon DynamoDB**.
+
+---
+
+### Summary of Key Learnings
+
+- Installed and configured a Vue.js frontend application  
+- Added backend authentication service using Cognito via Amplify CLI  
+- Designed data schema with GraphQL  
+- Automatically generated database tables in DynamoDB  
+- Connected frontend to real backend using GraphQL API  
+- Handled user event ticket bookings and data synchronization  
+
+The serverless approach enables you to build applications that are **flexible – cost-effective – scalable**, paying only for what you use.
+
+---
+
+### Clean Up Unused Resources
+
+If you used a personal AWS account, **you should delete all created resources after the workshop** to avoid unnecessary ongoing charges.  
+To remove backend resources created during the workshop, you can use the Amplify CLI.  
+Make sure Amplify CLI is installed and you are logged in to your AWS account.  
+In the root folder of your project, run:
+
+```bash
+amplify delete
+```
+This process will:  
+- Delete all backend resources on AWS (Cognito, DynamoDB, AppSync, etc.)  
+- Also remove local Amplify configuration files such as `schema.graphql`, the `amplify/` folder, etc.  
+
+{{% notice warning %}}
+If you want to keep your schema or config, make sure to back them up before deleting.
 {{% /notice %}}
 
-We will configure **Port Forwarding** for the RDP connection between our machine and **Private Windows Instance** located in the private subnet we created for this exercise.
+- The deletion may take a few minutes depending on the number of resources.  
+- You will be prompted for confirmation — type `Y` to continue.  
+- When completed successfully, you will see:
 
-![port-fwd](/images/arc-04.png) 
-
-#### Create IAM user with permission to connect SSM
-
-1. Go to [IAM service management console](https://console.aws.amazon.com/iamv2/home)
-   + Click **Users** , then click **Add users**.
-
-![FWD](/images/5.fwd/001-fwd.png)
-
-2. At the **Add user** page.
-   + In the **User name** field, enter **Portfwd**.
-   + Click on **Access key - Programmatic access**.
-   + Click **Next: Permissions**.
-  
-![FWD](/images/5.fwd/002-fwd.png)
-
-3. Click **Attach existing policies directly**.
-   + In the search box, enter **ssm**.
-   + Click on **AmazonSSMFullAccess**.
-   + Click **Next: Tags**, click **Next: Reviews**.
-   + Click **Create user**.
-
-4. Save **Access key ID** and **Secret access key** information to perform AWS CLI configuration.
-
-#### Install and Configure AWS CLI and Session Manager Plugin
-  
-To perform this hands-on, make sure your workstation has [AWS CLI]() and [Session Manager Plugin](https://docs.aws.amazon.com/systems-manager/latest/userguide/session) installed -manager-working-with-install-plugin.html)
-
-More hands-on tutorials on installing and configuring the AWS CLI can be found [here](https://000011.awsstudygroup.com/).
-
-{{%notice tip%}}
-With Windows, when extracting the **Session Manager Plugin** installation folder, run the **install.bat** file with Administrator permission to perform the installation.
-{{%/notice%}}
-
-#### Implement Portforwarding
-
-1. Run the command below in **Command Prompt** on your machine to configure **Port Forwarding**.
-
+```bash
+√ Project deleted in the cloud.
+✅ Project deleted locally.
 ```
-   aws ssm start-session --target (your ID windows instance) --document-name AWS-StartPortForwardingSession --parameters portNumber="3389",localPortNumber="9999" --region (your region)
-```
-{{%notice tip%}}
+![DB](/images/3.connect/03-DB3.png)
+{{% notice warning %}}
+If you DO NOT delete the Amplify project, resources like DynamoDB or Cognito will continue running on your AWS account and may incur unnecessary costs!
+{{% /notice %}}
 
-**Windows Private Instance** **Instance ID** information can be found when you view the EC2 Windows Private Instance server details.
+---
 
-{{%/notice%}}
+### ✅ Workshop Completed!
 
-   + Example command:
+Congratulations on completing the full workshop!  
+We hope this experience inspires you to explore more **serverless solutions** from AWS, such as:
 
-```
-C:\Windows\system32>aws ssm start-session --target i-06343d7377486760c --document-name AWS-StartPortForwardingSession --parameters portNumber="3389",localPortNumber="9999" --region ap-southeast-1
-```
+- Amazon S3 – for storing event images  
+- AWS Lambda – for handling backend logic  
+- Amazon API Gateway – for building REST APIs  
+- Amazon AppSync (Advanced) – for real-time and multi-source GraphQL APIs  
 
-{{%notice warning%}}
+**See you in the next workshop — and best of luck with your AWS journey!**
 
-If your command gives an error like below: \
-SessionManagerPlugin is not found. Please refer to SessionManager Documentation here: http://docs.aws.amazon.com/console/systems-manager/session-manager-plugin-not-found\
-Prove that you have not successfully installed the Session Manager Plugin. You may need to relaunch **Command Prompt** after installing **Session Manager Plugin**.
-
-{{%/notice%}}
-
-2. Connect to the **Private Windows Instance** you created using the **Remote Desktop** tool on your workstation.
-   + In the Computer section: enter **localhost:9999**.
-
-
-![FWD](/images/5.fwd/003-fwd.png)
-
-
-3. Return to the administration interface of the System Manager - Session Manager service.
-   + Click tab **Session history**.
-   + We will see session logs with Document name **AWS-StartPortForwardingSession**.
-
-
-![FWD](/images/5.fwd/004-fwd.png)
-
-
-Congratulations on completing the lab on how to use Session Manager to connect and store session logs in S3 bucket. Remember to perform resource cleanup to avoid unintended costs.

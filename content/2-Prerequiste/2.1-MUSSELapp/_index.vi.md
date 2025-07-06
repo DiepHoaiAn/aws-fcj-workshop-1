@@ -24,7 +24,7 @@ Sau vài giây, bạn sẽ thấy kết quả:
   ➜ Local:   http://localhost:3000/
   ➜ Network: use `--host` to expose
 ```
-→ Mở trình duyệt và truy cập địa chỉ http://localhost:3000/ để bắt đầu khám phá.
+→ Mở trình duyệt và truy cập địa chỉ `http://localhost:3000/` để bắt đầu khám phá.
 
 ### Giao diện chính
 
