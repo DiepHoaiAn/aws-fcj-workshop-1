@@ -6,7 +6,7 @@
 This is a **Hugo-based documentation site** for the workshop **Build a Serverless Event Booking Web App with AWS Amplify**, designed for students and developers who want to learn how to create full-stack, serverless web applications using **AWS Amplify**.
 
 > ✅ This workshop is part of the **AWS First Cloud Journey Internship Program (FCJ 2025)**
-> 📚 Language: Vietnamese (Tiếng Việt) and English
+> 📚 Language: Vietnamese and English
 
 
 ## 📌 Workshop Overview
@@ -73,9 +73,9 @@ You are free to use and adapt it for personal and non-commercial learning purpos
 
 ## 🙇‍♀️ Credits
 
-Developed and documented by:
-**Diệp Hoài An** – HCMUTE – AWS FCJ 2025
-Email: [diephoaian2003@gmail.com](mailto:diephoaian2003@gmail.com)
+Developed and documented by:  
+**Diệp Hoài An** – HCMUTE – AWS FCJ season 3 - 2025  
+Email: [diephoaian2003@gmail.com](mailto:diephoaian2003@gmail.com)  
 
 ---
 # 🛠️ Xây dựng Ứng dụng Web Đặt Vé Sự Kiện với AWS Amplify
@@ -83,8 +83,7 @@ Email: [diephoaian2003@gmail.com](mailto:diephoaian2003@gmail.com)
 Đây là tài liệu hướng dẫn thực hành trong khuôn khổ workshop **"Xây dựng Ứng dụng Web Đặt Vé Sự Kiện với AWS Amplify"**, thuộc chương trình **AWS First Cloud Journey** dành cho sinh viên.
 
 > 🎓 Người thực hiện: Diệp Hoài An – Đại học Sư phạm Kỹ thuật TP.HCM  
-> 🗓️ Ngày hoàn thành workshop: 05/07/2025  
-> 🌐 Giao diện tài liệu: Hugo + GitHub Pages (theme: Workshop)
+> 🗓️ Ngày hoàn thành workshop: 05/07/2025 
 
 
 ## 📚 Nội dung chính
